@@ -27,3 +27,28 @@
       white-space: nowrap;
       box-sizing: border-box; 
     }
+
+
+
+
+
+                    <div></div>
+                <div class="founder-1-text">
+                <h3>Alisa Morris</h3>
+                <p>Founder & Program Manager</p>
+            </div>
+
+
+
+
+.class p {
+
+}
+
+.class {
+
+
+  p{
+    
+  }
+}

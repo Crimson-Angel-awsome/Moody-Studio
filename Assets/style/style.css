@@ -42,15 +42,17 @@ header {
 }
 
 .mov-stu {
+    padding-top: 5em;
     background-color: #D0FBF9;
     display: grid;
     color: #000000;
     grid-template-columns: 1fr 1fr 1fr;
     background-size: cover;
     padding-bottom: 10%;
-    position: sticky;
+    position: relative;
     bottom: -100px;
     transition: bottom 0.5s ease-in-out;
+    
     a{
         color: #000000;
         text-decoration: none;
@@ -61,10 +63,11 @@ header {
 }
 
 .footer-links {
+    border-radius: 10px;
     font-size: x-large;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    position: relaive;
+    position: relative;
     bottom: -100px;
     transition: bottom 0.5s ease-in-out;
 }
@@ -78,6 +81,7 @@ header {
 }
 
 .email {
+    padding-bottom: 30%;
     padding-left: 15px;
     background-color: #000000;
     a{color: #ffffff;
@@ -85,6 +89,7 @@ header {
 }
 
 .booking {
+    padding-bottom: 30%;
     padding-left: 15px;
     background-color: #D900FF;
     a{color: #000000;
@@ -95,19 +100,17 @@ header {
 /* index.html unique */
 .Hero_Section {
     background-attachment: fixed;
-    padding-top: 35px;
     background-image: url(/Assets/images/hero.png);
     background-size: cover;
     background-position: center;
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.6);
-    background-blend-mode: overlay;
 }
 
 .hero-header {
     position: inherit;
     margin-left: 20px;
     h1 {
+        padding-top: 5%;
         margin-bottom: 20%;
         font-size: 100px;
         background-attachment: fixed;
@@ -215,10 +218,18 @@ header {
     align-self: center;
     justify-content: center;
 }
+.founder-1 {
+    background-color: #D900FF;
+    font-size: larger;
+}
+
+.founder-2 {
+    background-color: #D0FBF9;
+    font-size: larger;
+}
 
 .founder-1 img {
     width: 100%;
-    height: 100%;
 }
 
 .founder-1-text{
@@ -232,7 +243,6 @@ header {
 
 .founder-2 img {
     width: 100%;
-    height: 100%;
 }
 
 .founder-2-text {
@@ -297,17 +307,44 @@ header {
     grid-template-rows: auto 1fr;
 }
 
+.main-about {
+    background-image: url(/Assets/images/about-us.png);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    h1{
+        font-size: 100px;
+        padding-bottom: 30%;
+        padding-top: 5%;
+    }
+}
+
 .founders {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
+    border: 1px;
+    color: #ffffff;
+    background-color: #000000;
+    img {
+        width: 100%;
+    }
+    h2 {
+        font-size: 50px;
+    }
+}
+
+.instructor {
+    border: 1px solid;
+    padding: 5px;
 }
 
 .Instructors {
     color: #ffffff;
     background-color: #000000;
     display: grid;
-    grid-template-columns: auto auto auto;
+    border: 0.5px;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
 }
 
@@ -316,6 +353,13 @@ header {
     color: #ffffff;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    /* padding: 3%; */
+    justify-content: center;
+    text-align: left;
+    .our-space {
+        padding: 10%;
+        border: solid;
+    }
 }
 
 .upper {
@@ -443,4 +487,46 @@ header {
 .promise-3 img {
     width: 100%;
     max-width: 3.7fr;
+}
+
+.space-1 {
+    background-image: url(/Assets/images/space.png);
+    background-position: center;
+    background-size: cover;
+}
+
+/* responsiveness and media queries */
+
+@media (max-width: 768px) {
+    .main-about {
+            h1 {
+                padding-top: 10%;
+        font-size: 10vw;
+    }
+    }
+
+    .main-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .mov-stu {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .founders {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .Instructors {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
 }
