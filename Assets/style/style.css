@@ -3,6 +3,7 @@
     margin: 0;
     border: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 header {
@@ -31,7 +32,6 @@ header {
         li:last-child{
             margin-left: auto;
             margin-right: 0;
-            padding-left: 223.5px;
             border: 0;
             font-size: larger;
         }
@@ -67,7 +67,7 @@ header {
     font-size: x-large;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    position: relative;
+    /* position: relative; */
     bottom: -100px;
     transition: bottom 0.5s ease-in-out;
 }
@@ -151,12 +151,12 @@ header {
 
 
 .alert-ticker {
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
     width: 100%;
     height: 30px;
     background-color: #1F41FF;
-    color: white;
+    color: white !important;
     overflow: hidden;
     bottom: 0;
     left: 0;
@@ -497,12 +497,21 @@ header {
 
 /* responsiveness and media queries */
 
-@media (max-width: 768px) {
-    .main-about {
-            h1 {
-                padding-top: 10%;
-        font-size: 10vw;
+@media (max-width: 500px) {
+
+    header {
+       ul {
+         font-size: 3vw;
+       }
     }
+
+    .Hero_Section {
+        h1 {
+            padding-left: 0;
+            font-size: 8vw;
+            padding-top: 10dvh;
+        }
+
     }
 
     .main-section {
@@ -528,5 +537,23 @@ header {
     .Instructors {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+    }
+
+    h1 {
+        padding: 10%;
+        font-size: 2%;
+    }
+
+    * h2 {
+        font-size: 3vw;
+        padding-bottom: 70%;
+    }
+
+    .quote {
+        padding-bottom: 0 !important;
+    }
+
+    h3 {
+        font-size: x-large;
     }
 }
